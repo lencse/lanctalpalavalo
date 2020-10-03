@@ -11,8 +11,10 @@ backend:
 # Uncomment local_backend when you need to develop in your local
 #local_backend: true # run npx netlify-cms-proxy-server for local testing
 
-media_folder: "static/assets" 
-public_folder: "/assets" 
+publish_mode: editorial_workflow
+
+media_folder: "static/assets"
+public_folder: "/assets"
 
 collections:
   - name: 'posts' # Used in routes, ie.: /admin/collections/:slug/edit
@@ -62,7 +64,7 @@ collections:
         - label: "CTA"
           name: "cta"
           widget: "object"
-          fields: 
+          fields:
             - name: "ctaText"
               label: "CTA text"
               widget: "string"
@@ -122,7 +124,7 @@ collections:
                 name: twitterUsername
                 label: Twitter
                 required: false
-                
+
           - label: "Google Analytics"
             name: ga
             widget: string
